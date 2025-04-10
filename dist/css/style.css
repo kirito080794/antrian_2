@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap");
 @import url(../../node_modules/animate.css/animate.css);
+@import url(reset.css);
 :root {
   --thema-white-background: #f0f5fd;
   --thema-white-font: #364670;
@@ -51,24 +52,6 @@ body {
   min-height: 100vh;
   background-color: var(--thema-bg-navbar) !important;
   color: var(--color) !important;
-}
-
-a {
-  text-decoration: none;
-  color: var(--color) !important;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-select option[disabled] {
-  display: none;
-}
-
-#collapse-menu {
-  display: none;
 }
 
 .sidebar {
@@ -207,6 +190,10 @@ main {
     z-index: 4;
     background-color: var(--thema-bg-navbar) !important;
     /* background-color: blue !important; */
+
+    .navbar-brand {
+      color: var(--color) !important;
+    }
   }
 
   .content {

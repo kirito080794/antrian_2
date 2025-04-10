@@ -1,0 +1,55 @@
+.form-control:focus {
+  box-shadow: 0 0 0 0.15rem rgba(13, 109, 253, 0.288);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color) !important;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+select option[disabled] {
+  display: none;
+}
+
+#collapse-menu {
+  display: none;
+}
+
+.bd-callout-info {
+  --bd-callout-color: var(--bs-info-text-emphasis);
+  --bd-callout-bg: var(--bs-info-bg-subtle);
+  --bd-callout-border: var(--bs-info-border-subtle);
+}
+.bd-callout {
+  --bs-link-color-rgb: var(--bd-callout-link);
+  --bs-code-color: var(--bd-callout-code-color);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--bd-callout-color, inherit);
+  background-color: var(--bd-callout-bg, var(--bs-gray-100));
+  border-left: 0.25rem solid var(--bd-callout-border, var(--bs-gray-300));
+}
+
+.table-responsive {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.btn .fa {
+  color: #fff;
+  font-size: calc(var(--font-size-body) - 0.7px);
+}
+
+.card-header i {
+  font-size: 2rem;
+  cursor: pointer;
+}

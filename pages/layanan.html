@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../dist/css/switch.css" />
+    <link rel="stylesheet" href="../dist/css/style.css" />
+    <link rel="stylesheet" href="../dist/css/page/index.css" />
+    <title>Antrian</title>
+  </head>
+  <body>
+    <nav
+      class="sidebar animate__animated animate__FadeIn"
+      id="navbarSupportedContent"
+    >
+      <div class="text-center">
+        <h3>Antrian</h3>
+        <h3 class="d-none">AnT</h3>
+      </div>
+      <ul class="link">
+        <li class="link-text">Menu</li>
+        <li class="link-item">
+          <a href="../index.html"
+            ><i class="fa fa-fw fa-house"></i> <span>Dashboard</span></a
+          >
+        </li>
+        <li class="link-item active">
+          <a href="/pages/layanan.html"
+            ><i class="fa fa-fw fa-brands fa-servicestack"></i>
+            <span>Layanan</span>
+          </a>
+        </li>
+        <li class="link-item">
+          <a href="#"
+            ><i class="fa fa-fw fa-computer"></i> <span>Komputer</span></a
+          >
+        </li>
+        <li class="link-item">
+          <a href="#"
+            ><i class="fa fa-fw fa-network-wired"></i> <span>Loket</span></a
+          >
+        </li>
+        <li class="link-text">Monitoring</li>
+        <li class="link-item">
+          <a href="#"
+            ><i class="fa fa-fw fa-print"></i> <span>Cetak Antrian</span></a
+          >
+        </li>
+        <li class="link-item">
+          <a href="#"
+            ><i class="fa fa-fw fa-tv"></i> <span>Nomor Antrian</span></a
+          >
+        </li>
+        <li class="link-item">
+          <a href="#"
+            ><i class="fa fa-fw fa-phone"></i> <span>Pemanggil Antrian</span></a
+          >
+        </li>
+        <li class="link-text">Report</li>
+        <li class="link-item">
+          <a href="#"><i class="fa fa-fw fa-flag"></i> <span>Laporan</span></a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <div
+            class="collapse navbar-collapse d-flex justify-content-center align-items-center"
+          >
+            <div class="navbar-brand me-auto">
+              <i class="fa fa-fw fa-brands fa-servicestack"></i>
+              <span>Layanan</span>
+            </div>
+            <button
+              class="navbar-toggler me-3"
+              type="button"
+              id="collapse-menu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex mt-2">
+              <div class="switch mt-auto">
+                <label class="label">
+                  <div class="toggle">
+                    <input
+                      class="toggle-state"
+                      type="checkbox"
+                      id="thema"
+                      name="thema"
+                      value="true"
+                    />
+                    <div class="indicator"></div>
+                  </div>
+                </label>
+
+                <span class="switch__on"><i class="fa-solid fa-moon"></i></span>
+                <span class="switch__off"><i class="fa-solid fa-sun"></i></span>
+              </div>
+              <div class="auth me-3 ms-3">
+                <a href="#"><i class="fa fa-sign-in"></i> log in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="content">
+        <div class="row">
+          <div class="col">
+            <h5 class="animate__animated animate__fadeInUp animate__slower">
+              Layanan
+            </h5>
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="card">
+                  <div
+                    class="card-header d-flex justify-content-between align-items-center"
+                  >
+                    <span>Tabel</span>
+                    <i
+                      class="fa fa-solid fa-square-plus"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalForm"
+                      id="add"
+                    ></i>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-hover table-borderless">
+                        <thead class="table-light">
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nama Layanan</th>
+                            <th scope="col">Kode Layanan</th>
+                            <th scope="col">Aksi</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Layanan A</td>
+                            <td>A</td>
+                            <td>
+                              <div
+                                class="btn-group btn-group-md"
+                                role="group"
+                                aria-label="Basic outlined example"
+                              >
+                                <button
+                                  type="button"
+                                  class="btn btn-info"
+                                  id="edit"
+                                  data-id="1"
+                                >
+                                  <i class="fa fa-fw fa-edit"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-danger"
+                                  data-id="1"
+                                >
+                                  <i class="fa fa-fw fa-trash-can"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Layanan B</td>
+                            <td>B</td>
+                            <td>
+                              <div
+                                class="btn-group btn-group-md"
+                                role="group"
+                                aria-label="Basic outlined example"
+                              >
+                                <button
+                                  type="button"
+                                  class="btn btn-info"
+                                  id="edit"
+                                  data-id="2"
+                                >
+                                  <i class="fa fa-fw fa-edit"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-danger"
+                                  data-id="2"
+                                >
+                                  <i class="fa fa-fw fa-trash-can"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Layanan C</td>
+                            <td>C</td>
+                            <td>
+                              <div
+                                class="btn-group btn-group-md"
+                                role="group"
+                                aria-label="Basic outlined example"
+                              >
+                                <button
+                                  type="button"
+                                  class="btn btn-info"
+                                  id="edit"
+                                  data-id="3"
+                                >
+                                  <i class="fa fa-fw fa-edit"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-danger"
+                                  id="delete"
+                                  data-id="3"
+                                >
+                                  <i class="fa fa-fw fa-trash-can"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tfoot class="table-light">
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nama Layanan</th>
+                            <th scope="col">Kode Layanan</th>
+                            <th scope="col">Aksi</th>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="bd-callout bd-callout-info">
+                  <strong>Catatan:</strong> Jika anda menghapus data semua data
+                  yang <b>terkait / terhubung</b> dengan data tersebut akan ikut
+                  terhapus.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="footer animate__animated animate__fadeInUp animate__delay-1s ms-1 pt-5"
+      >
+        © 2025 Ljdev021. All Rights Reserved.
+      </div>
+    </main>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modalForm"
+      tabindex="-1"
+      aria-labelledby="modalFormLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalFormLabel">
+              Form Layanan
+              <span id="action-text"></span>
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form class="needs-validation" novalidate>
+            <div class="modal-body">
+              <div class="form-floating mb-3">
+                <input type="hidden" name="id" id="id" disabled />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="kode_layanan"
+                  name="kode_layanan"
+                  placeholder="Kode Layanan"
+                  required
+                />
+                <label for="kode_layanan">Kode Layanan</label>
+                <div class="invalid-feedback">
+                  Kode Layanan tidak boleh kosong
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nama_layanan"
+                  name="nama_layanan"
+                  placeholder="Nama Layanan"
+                  required
+                />
+                <label for="nama_layanan">Nama Layanan</label>
+                <div class="invalid-feedback">
+                  nama Layanan tidak boleh kosong
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Batal
+              </button>
+              <button type="button" class="btn btn-primary" id="btnACtion">
+                Tambah
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-container top-0 end-0 p-3">
+      <div
+        id="toast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <strong class="me-auto"></strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body"></div>
+      </div>
+    </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/chart.js/dist/chart.umd.js"></script>
+    <script src="../dist/js/page/layanan.js" type="module"></script>
+  </body>
+</html>

@@ -13,4 +13,9 @@ function change(_color) {
   color = _color;
   return color;
 }
-export { color, change };
+
+function modal(modal) {
+  return new bootstrap.Modal(modal);
+}
+
+export { color, change, modal };

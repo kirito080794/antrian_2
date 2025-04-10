@@ -33,7 +33,7 @@
           >
         </li>
         <li class="link-item">
-          <a href="#"
+          <a href="/pages/layanan.html"
             ><i class="fa fa-fw fa-brands fa-servicestack"></i>
             <span>Layanan</span>
           </a>
@@ -76,7 +76,10 @@
           <div
             class="collapse navbar-collapse d-flex justify-content-center align-items-center"
           >
-            <div class="ms-auto"></div>
+            <div class="me-auto">
+              <i class="fa fa-fw fa-house"></i>
+              <span>Dashboard</span>
+            </div>
             <button
               class="navbar-toggler me-3"
               type="button"
@@ -101,6 +104,14 @@
 
                 <span class="switch__on"><i class="fa-solid fa-moon"></i></span>
                 <span class="switch__off"><i class="fa-solid fa-sun"></i></span>
+              </div>
+              <div class="auth me-3 ms-3">
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  ><i class="fa fa-sign-in"></i> log in</a
+                >
               </div>
             </div>
           </div>
@@ -154,6 +165,8 @@
                       <select
                         class="form-select form-select-sm"
                         aria-label="Pilih Tahun"
+                        name="tahun"
+                        id="tahun"
                       >
                         <option value="" disabled selected>Pilih Tahun</option>
                         <option value="1">2024</option>
@@ -177,6 +190,65 @@
         © 2025 Ljdev021. All Rights Reserved.
       </div>
     </main>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              <i class="fa-regular fa-pen-to-square"></i> Login Form
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                placeholder="Username"
+                autocomplete="false"
+              />
+              <label for="username">Username</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Password"
+              />
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Batal
+            </button>
+            <button type="button" class="btn btn-primary">
+              <i class="fa fa-sign-in"></i> Log in
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="node_modules/chart.js/dist/chart.umd.js"></script>
     <!-- <script src="dist/js/script.js" type="module"></script> -->

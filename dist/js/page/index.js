@@ -1,3 +1,4 @@
+"use strict";
 import "../script.js";
 import variabel, { color } from "../componen/variabel.js";
 
