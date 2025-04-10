@@ -1,0 +1,125 @@
+.akses__cepat div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: var(--thema-bg-navbar);
+  box-shadow: 4px 5px 1px 1px rgba(136, 148, 171, 0.2);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+  -moz-transition: all var(--transition);
+  -ms-transition: all var(--transition);
+  -o-transition: all var(--transition);
+
+  &:nth-child(1) {
+    --animate-delay: 0.2s;
+  }
+  &:nth-child(2) {
+    --animate-delay: 0.4s;
+  }
+  &:nth-child(3) {
+    --animate-delay: 0.6s;
+  }
+  &:nth-child(4) {
+    --animate-delay: 0.8s;
+  }
+
+  &:not(:first-of-type),
+  &:not(:last-of-type) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 80px;
+    border-radius: 1rem;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    transition: all var(--transition);
+    -webkit-transition: all var(--transition);
+    -moz-transition: all var(--transition);
+    -ms-transition: all var(--transition);
+    -o-transition: all var(--transition);
+  }
+
+  &:nth-child(1) i {
+    color: #1d92f1;
+    background-color: #ddeffd;
+  }
+  &:nth-child(2) i {
+    color: #ffd12c;
+    background-color: #fff8df;
+  }
+  &:nth-child(3) i {
+    color: #3bc963;
+    background-color: #e2f7e8;
+  }
+  &:nth-child(4) i {
+    color: #1976d2;
+    background-color: #ede9f8;
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 4px 5px 1px 1px rgb(136, 148, 171);
+    &:nth-child(1) {
+      color: #1d92f1;
+      background-color: #ddeffd;
+    }
+    &:nth-child(2) {
+      color: #ffd12c;
+      background-color: #fff8df;
+    }
+    &:nth-child(3) {
+      color: #3bc963;
+      background-color: #e2f7e8;
+    }
+    &:nth-child(4) {
+      color: #1976d2;
+      background-color: #ede9f8;
+    }
+  }
+
+  &:hover i {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+
+  h5 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+@media (max-width: 991.98px) {
+  .akses__cepat div {
+    i {
+      font-size: 2rem;
+    }
+  }
+}

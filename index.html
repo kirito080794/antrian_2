@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="dist/css/switch.css" />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="dist/css/page/index.css" />
+    <title>Antrian</title>
+  </head>
+  <body>
+    <nav
+      class="sidebar animate__animated animate__FadeIn"
+      id="navbarSupportedContent"
+    >
+      <div class="text-center">
+        <h3>Antrian</h3>
+        <h3 class="d-none">AnT</h3>
+      </div>
+      <ul class="link">
+        <li class="link-text">Menu</li>
+        <li class="link-item active">
+          <a href="#"
+            ><i class="fa fa-fw fa-house"></i> <span>Dashboard</span></a
+          >
+        </li>
+        <li class="link-item">
+          <a href="#"
+            ><i class="fa fa-fw fa-brands fa-servicestack"></i>
+            <span>Layanan</span>
+          </a>
+        </li>
+        <li class="link-item">
+          <a href="#"
+            ><i class="fa fa-fw fa-computer"></i> <span>Komputer</span></a
+          >
+        </li>
+        <li class="link-item">
+          <a href="#"
+            ><i class="fa fa-fw fa-network-wired"></i> <span>Loket</span></a
+          >
+        </li>
+        <li class="link-text">Monitoring</li>
+        <li class="link-item">
+          <a href="#"
+            ><i class="fa fa-fw fa-print"></i> <span>Cetak Antrian</span></a
+          >
+        </li>
+        <li class="link-item">
+          <a href="#"
+            ><i class="fa fa-fw fa-tv"></i> <span>Nomor Antrian</span></a
+          >
+        </li>
+        <li class="link-item">
+          <a href="#"
+            ><i class="fa fa-fw fa-phone"></i> <span>Pemanggil Antrian</span></a
+          >
+        </li>
+        <li class="link-text">Report</li>
+        <li class="link-item">
+          <a href="#"><i class="fa fa-fw fa-flag"></i> <span>Laporan</span></a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <div
+            class="collapse navbar-collapse d-flex justify-content-center align-items-center"
+          >
+            <div class="ms-auto"></div>
+            <button
+              class="navbar-toggler me-3"
+              type="button"
+              id="collapse-menu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex mt-2">
+              <div class="switch mt-auto">
+                <label class="label">
+                  <div class="toggle">
+                    <input
+                      class="toggle-state"
+                      type="checkbox"
+                      id="thema"
+                      name="thema"
+                      value="true"
+                    />
+                    <div class="indicator"></div>
+                  </div>
+                </label>
+
+                <span class="switch__on"><i class="fa-solid fa-moon"></i></span>
+                <span class="switch__off"><i class="fa-solid fa-sun"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="content">
+        <div class="row mb-5">
+          <div class="col">
+            <h5 class="animate__animated animate__fadeInUp animate__slower">
+              Akses Cepat
+            </h5>
+            <div class="row justify-content-center akses__cepat">
+              <div
+                class="col-lg-2 col-md-2 col-sm-6 text-center animate__animated animate__fadeInDown animate__delay-1s"
+              >
+                <i class="fa fa-network-wired"></i>
+                <h5>Loket</h5>
+              </div>
+              <div
+                class="col-lg-2 col-md-2 col-sm-6 text-center animate__animated animate__fadeInDown animate__delay-1s"
+              >
+                <i class="fa fa-tv"></i>
+                <h5>Monitoring Antrian</h5>
+              </div>
+              <div
+                class="col-lg-2 col-md-2 col-sm-6 text-center animate__animated animate__fadeInDown animate__delay-1s"
+              >
+                <i class="fa fa-phone"></i>
+                <h5>Monitoring Pemanggil</h5>
+              </div>
+              <div
+                class="col-lg-2 col-md-2 col-sm-6 text-center animate__animated animate__fadeInDown animate__delay-1s"
+              >
+                <i class="fa fa-print"></i>
+                <h5>Cetak Antrian</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h5 class="animate__animated animate__fadeInUp animate__slower">
+              Data
+            </h5>
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                    <span>Grafik</span>
+                    <div class="col-lg-2 col-md-4 col-sm-5">
+                      <select
+                        class="form-select form-select-sm"
+                        aria-label="Pilih Tahun"
+                      >
+                        <option value="" disabled selected>Pilih Tahun</option>
+                        <option value="1">2024</option>
+                        <option value="2">2025</option>
+                        <option value="3">2026</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="chart" class="chart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="footer animate__animated animate__fadeInUp animate__delay-1s ms-1 pt-5"
+      >
+        © 2025 Ljdev021. All Rights Reserved.
+      </div>
+    </main>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/chart.js/dist/chart.umd.js"></script>
+    <!-- <script src="dist/js/script.js" type="module"></script> -->
+    <script src="dist/js/page/index.js" type="module"></script>
+  </body>
+</html>
